@@ -4,41 +4,45 @@
   padding: 0;
 }
 
-html, body {
-  min-height: 100vh;
-  
-}
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 30vh 30vh 20vh 20vh;
+  gap: 10px;
+
+
 }
 
 header {
-  width : 100%;
-  flex: 0 0 30%;
+  width: 100%;
+    background-color: #1f2937;
+    padding-top: 10px;
 
 }
 
 .navigation-bar {
-  display : flex;
+  display: flex;
   justify-content: space-around;
-  background-color: #1F2937;
 }
 
-.information {
-  flex: 0 0 30%;
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 12px;
 }
+
+
 
 
 
 
 .testimonial {
-  flex: 0 0 20%;
-}
+  font-size: 36px;
+  background-color: #E5E7EB;
+  width: 100%;
+  color: #1F2937;
+  font-weight: 300;
 
-
-footer {
-  flex: 0 0 20%;
 }
