@@ -4,22 +4,18 @@
   padding: 0;
 }
 
-
 body {
   margin: 0;
   display: grid;
   min-height: 100vh;
   grid-template-rows: 30vh 30vh 20vh 20vh;
   gap: 10px;
-
-
 }
 
 header {
   width: 100%;
-    background-color: #1f2937;
-    padding-top: 10px;
-
+  background-color: #1f2937;
+  padding-top: 10px;
 }
 
 .navigation-bar {
@@ -31,18 +27,22 @@ header {
   display: flex;
   list-style: none;
   gap: 12px;
+  color: #E5E7EB;
+  font-size: 18px;
 }
-
-
-
 
 
 
 .testimonial {
   font-size: 36px;
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
   width: 100%;
-  color: #1F2937;
+  color: #1f2937;
   font-weight: 300;
+}
+
+.logo {
+  font-size: 24px;
+  color: #F9FAF8;
 
 }
