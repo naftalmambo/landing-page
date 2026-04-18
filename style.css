@@ -5,19 +5,26 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+
+
+
+}
+
+
 body {
   margin: 0;
   display: grid;
   min-height: 100vh;
   /* 50/30/20/10 structure */
-  grid-template-rows: 60vh 70vh 50vh 30vh;
-  gap: 10px; /* Optional gap between rows */
+  grid-template-rows: 5vh  60vh 70vh 50vh 30vh;
 }
 
 /* 2. Header & Navigation */
 header {
   background-color: #1f2937;
-  padding: 20px 15%; /* Uniform padding */
+  padding: 30px 15%; /* Uniform padding */
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
@@ -28,6 +35,11 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: transparent; /* Removed blue to match dark header */
+  background-color: #1f2937;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 0 15%;
 }
 
 .logo {
@@ -43,15 +55,16 @@ header {
   gap: 24px;
 }
 
-.nav-links li {
+.nav-links li a {
   color: #e5e7eb;
   cursor: pointer;
+  text-decoration: none;
 
   font-size: 18px;
   transition: color 0.3s ease;
 }
 
-.nav-links li:hover {
+.nav-links li a:hover {
    color: #ffffff;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
@@ -145,6 +158,8 @@ header {
   padding: 0 15%; /* Keeps text from stretching too wide */
   text-align: center;
   flex-direction: column;
+      scroll-margin-top: 80px; 
+
 }
 
 .infor-title {
@@ -159,6 +174,8 @@ header {
 .information {
   width: 100%;
   margin-top: 30px;
+      scroll-margin-top: 80px; 
+
 }
 
 .infor-container {
@@ -228,8 +245,8 @@ footer {
 .button-sec button {
   background-color: transparent;
   color: rgba(245, 235, 235, 0.877);
-  padding: 2px 12px;
-  border-radius: 4px;
+  padding: 8px 32px;
+  border-radius: 8px;
   border: 2px solid rgba(245, 235, 235, 0.877);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -246,6 +263,7 @@ footer {
   color: whitesmoke;
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 5px ;
 }
 
 .action-subtext {
