@@ -1,4 +1,3 @@
-/* 1. Global Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,17 +9,16 @@ html {
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   display: grid;
   min-height: 100vh;
-  /* 50/30/20/10 structure */
   grid-template-rows: 5vh 60vh 70vh 50vh 30vh;
 }
 
-/* 2. Header & Navigation */
 header {
   background-color: #1f2937;
-  padding: 30px 15%; /* Uniform padding */
+  padding: 30px 15%;
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
@@ -30,7 +28,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent; /* Removed blue to match dark header */
+  background-color: transparent;
   background-color: #1f2937;
   width: 100%;
   position: sticky;
@@ -43,6 +41,15 @@ header {
   color: #f9faf8;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(56, 130, 246, 0.4);
+  transform: scale(1.02);
 }
 
 .nav-links ul {
@@ -65,27 +72,26 @@ header {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* 3. Hero Section Logic */
 .hero-section {
   display: flex;
-  flex: 1; /* Forces hero to fill the remaining 50vh height */
+  flex: 1;
   justify-content: space-between;
   align-items: center;
-  gap: 40px; /* Space between text and image */
+  gap: 40px;
   margin-top: 20px;
   background-color: #1f2937;
   align-items: center;
 }
 
 .hero-main {
-  flex: 1; /* Clean 50/50 split */
+  flex: 1;
   padding: 0 5px 0 5px;
 }
 
 .hero-image {
-  flex: 1; /* Clean 50/50 split */
+  flex: 1;
   background-color: #6b7280;
-  height: 300px; /* Specific size for the placeholder */
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,7 +99,6 @@ header {
   background-color: gray;
 }
 
-/* 4. Hero Typography */
 .hero-title {
   font-size: 48px;
   font-weight: 900;
@@ -113,11 +118,10 @@ header {
   color: white;
   padding: 8px 32px;
   border-radius: 8px;
-  border: 2px solid rgba(56, 130, 246, 0.5); /* Semi-visible border */
+  border: 2px solid rgba(56, 130, 246, 0.5);
   font-weight: bold;
   cursor: pointer;
 
-  /* Link the animation here */
   animation: pulse-glow 2s infinite ease-in-out;
 }
 
@@ -127,9 +131,8 @@ header {
     border-color: rgba(56, 130, 246, 0.5);
   }
   50% {
-    /* The "Peak" of the glow */
     box-shadow: 0 0 20px 5px rgba(56, 130, 246, 0.7);
-    border-color: rgba(147, 197, 253, 1); /* Lighter blue border */
+    border-color: rgba(147, 197, 253, 1);
   }
   100% {
     box-shadow: 0 0 5px 0px rgba(56, 130, 246, 0.4);
@@ -141,16 +144,16 @@ header {
   animation-play-state: paused;
 }
 
-/* 5. Testimonial Section */
 .testimonial {
+  font-family: 'Roboto', sans-serif;
   background-color: #e5e7eb;
   color: #1f2937;
   font-size: 36px;
   font-weight: 300;
-  display: flex; /* Center the feedback text */
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 15%; /* Keeps text from stretching too wide */
+  padding: 10px 15%;
   text-align: center;
   flex-direction: column;
   scroll-margin-top: 80px;
@@ -166,6 +169,7 @@ header {
 }
 
 .information {
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   margin-top: 30px;
   scroll-margin-top: 80px;
@@ -217,6 +221,7 @@ header {
 }
 
 footer {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
