@@ -10,7 +10,7 @@ body {
   display: grid;
   min-height: 100vh;
   /* 50/30/20/10 structure */
-  grid-template-rows: 60vh 70vh 20vh 20vh;
+  grid-template-rows: 60vh 70vh 50vh 20vh;
   gap: 10px; /* Optional gap between rows */
 }
 
@@ -112,6 +112,7 @@ header {
   justify-content: center;
   padding: 0 15%; /* Keeps text from stretching too wide */
   text-align: center;
+  flex-direction: column;
 }
 
 .infor-title {
@@ -157,4 +158,22 @@ header {
   max-width: 200px;
   text-wrap: wrap;
   text-align: center;
+}
+
+
+.text {
+  width: 60%;
+  text-align: justify;
+  margin-bottom: 8px;
+  
+
+}
+
+.author {
+  text-align: right;
+  width: 60%;
+  font-size: 22px;
+  font-weight: bold ;
+
+
 }
