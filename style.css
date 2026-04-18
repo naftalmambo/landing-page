@@ -150,7 +150,7 @@ header {
   display: flex; /* Center the feedback text */
   align-items: center;
   justify-content: center;
-  padding: 0 15%; /* Keeps text from stretching too wide */
+  padding: 20px 15%; /* Keeps text from stretching too wide */
   text-align: center;
   flex-direction: column;
   scroll-margin-top: 80px;
