@@ -13,7 +13,7 @@ body {
   margin: 0;
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 5vh 60vh 70vh 50vh 30vh;
+  grid-template-rows: 5vh 70vh 70vh 50vh 30vh;
 }
 
 header {
@@ -28,7 +28,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
   background-color: #1f2937;
   width: 100%;
   position: sticky;
@@ -144,7 +143,7 @@ header {
   animation-play-state: paused;
 }
 
-.testimonial {
+.products {
   font-family: 'Roboto', sans-serif;
   background-color: #e5e7eb;
   color: #1f2937;
@@ -168,7 +167,7 @@ header {
   color: #1f2937;
 }
 
-.information {
+.about-us {
   font-family: 'Roboto', sans-serif;
   width: 100%;
   margin-top: 30px;
