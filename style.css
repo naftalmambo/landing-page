@@ -13,7 +13,7 @@ body {
   margin: 0;
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 5vh 70vh 70vh 50vh 30vh;
+  grid-template-rows: 10vh 70vh 60vh 50vh 30vh;
 }
 
 header {
@@ -37,6 +37,7 @@ header {
   border-bottom: 2px solid #ebe9de; 
   /* This creates the glow effect along the whole line */
   box-shadow: 0 4px 15px -2px rgba(255, 215, 0, 0.6);
+  z-index: 1000;
 }
 
 
@@ -92,6 +93,7 @@ header {
 .hero-main {
   flex: 1;
   padding: 0 5px 0 5px;
+  max-width: 600px;
 }
 
 .hero-image {
@@ -170,53 +172,108 @@ header {
   margin-bottom: 0;
   padding: 10px;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 44px;
   color: #1f2937;
 }
+
+.infor-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3882f6;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
 
 .about-us {
   font-family: 'Roboto', sans-serif;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 0;
+  padding: 60px 15%;
   scroll-margin-top: 80px;
+  background-color: #ffffff;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
-
+               
 
 
 .infor-container {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  gap: 50px;
-  margin-bottom: 50px auto 100px auto;
+  flex-wrap: wrap; /* Crucial for responsiveness */
+  gap: 40px;
+  margin: 40px auto 80px auto; 
+  width: 100%;
 }
 
+
 .infor-sec {
-  max-width: 200px;
-  width: 100%;
-  height: 200px;
-  border: 4px solid blueviolet;
-  margin-bottom: 12px;
-  border-radius: 12px;
+  width: 100px; /* Scaled down for better balance */
+  height: 100px;
+  border: 3px solid #3882f6;
+  margin-bottom: 24px;
+  border-radius: 50%; /* Circle shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3882f6;
+  transition: all 0.3s ease;
 }
+
+/* Inverts colors when the whole card is hovered */
+.infor-grid:hover .infor-sec {
+  background-color: #3882f6;
+  color: white;
+}
+
+
+.fa-solid {
+  font-size: 40px;
+}
+
+
 
 .infor-grid {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
+  flex: 1; /* This ensures all 4 cards take up equal width */
+  max-width: 250px; /* Prevents cards from getting awkwardly wide on big screens */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepares it for a hover effect */
+  cursor: pointer;
 }
 
+.infor-grid:hover {
+  transform: translateY(-10px);
+  background-color: #f8fafc;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+}
+
+.infor-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+
 .infor-subtext {
-  max-width: 200px;
-  text-wrap: wrap;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563; /* Softer gray for a high-end feel */
   text-align: center;
 }
 
 .text {
-  width: 60%;
+  width: 80%;
+  max-width: 900px;
   text-align: justify;
   margin-bottom: 8px;
   font-style: italic;
@@ -224,7 +281,9 @@ header {
 
 .author {
   text-align: right;
-  width: 60%;
+  width: 80%;
+    max-width: 900px;
+
   font-size: 22px;
   font-weight: bold;
 }
@@ -277,6 +336,112 @@ footer {
   color: rgba(245, 235, 235, 0.877);
 }
 
+/* --- RESPONSIVENESS (Mobile & Tablet) --- */
+
+@media (max-width: 768px) {
+  /* 1. Reset Body Grid */
+  body {
+    /* vh units are risky on mobile; auto lets content breathe */
+    grid-template-rows: auto; 
+  }
+
+  /* 2. Navigation Polish */
+  .navigation-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%; /* Less side padding on small screens */
+    text-align: center;
+  }
+
+  .nav-links ul {
+    gap: 20px;
+    padding: 0;
+  }
+
+  /* 3. Hero Section Polish */
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+    gap: 30px;
+  }
+
+  .hero-main {
+    order: 1; /* Keeps text on top */
+  }
+
+  .hero-image {
+    order: 2; /* Keeps image below text */
+    width: 100%;
+    height: 250px;
+  }
+
+  .hero-title {
+    font-size: 32px; /* Smaller title for mobile screens */
+  }
+
+  /* 4. About Us / Info Cards */
+  .about-us {
+    padding: 40px 5%;
+  }
+
+  .infor-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+  }
+
+  .infor-grid {
+    max-width: 100%; /* Cards take full width on mobile */
+    padding: 10px;
+  }
+
+  /* 5. Quote Section */
+  .products {
+    padding: 40px 10%;
+    font-size: 24px; /* Shrink large quote text */
+  }
+
+  .text, .author {
+    width: 100%; /* Text spans the width */
+  }
+
+  /* 6. Call to Action Banner */
+  .call-to-action {
+    flex-direction: column;
+    width: 95%; /* Banner fills most of the screen width */
+    padding: 30px 20px;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .button-sec {
+    align-self: center;
+    width: 100%;
+  }
+
+  .button-sec button {
+    width: 100%; /* Large tap target for mobile users */
+    padding: 12px;
+  }
+}
+
+/* Optional: Extra small screens (Phones under 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .infor-sec {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .fa-solid {
+    font-size: 30px;
+  }
+}
 @media (max-width: 768px) {
   body {
     grid-template-rows: auto;
@@ -312,9 +477,11 @@ footer {
   .call-to-action {
     flex-direction: column;
     width: 90%;
+    max-width: 950px;
     padding: 30px;
     text-align: center;
     gap: 20px;
+    margin: 0 auto;
   }
 
   .button-sec {
