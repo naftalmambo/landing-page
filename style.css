@@ -34,14 +34,11 @@ header {
   top: 0;
   padding: 0 15%;
   /* This is the solid gold border line */
-  border-bottom: 2px solid #ebe9de; 
+  border-bottom: 2px solid #ebe9de;
   /* This creates the glow effect along the whole line */
   box-shadow: 0 4px 15px -2px rgba(255, 215, 0, 0.6);
   z-index: 1000;
 }
-
-
-
 
 .logo {
   font-size: 24px;
@@ -124,11 +121,16 @@ header {
 .hero-button {
   background-color: #3882f6;
   color: white;
-  padding: 8px 32px;
+  padding: 16px 40px;
   border-radius: 8px;
-  border: 2px solid rgba(56, 130, 246, 0.5);
-  font-weight: bold;
+  font-size: 16px;
+
+  font-weight: 900;
   cursor: pointer;
+  border: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease;
 
   animation: pulse-glow 2s infinite ease-in-out;
 }
@@ -149,9 +151,13 @@ header {
 }
 
 .hero-button:hover {
-  animation-play-state: paused;
+  background-color: #2563eb; /* Darkens slightly */
+  transform: scale(1.05); /* Grows slightly */
+  animation-play-state: paused; /* Stops pulse so it's easier to click */
 }
-
+.hero-button:active {
+  transform: scale(0.98);
+}
 .products {
   font-family: 'Roboto', sans-serif;
   background-color: #e5e7eb;
@@ -186,7 +192,6 @@ header {
   border-radius: 2px;
 }
 
-
 .about-us {
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -194,23 +199,19 @@ header {
   padding: 60px 15%;
   scroll-margin-top: 80px;
   background-color: #ffffff;
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-               
-
 
 .infor-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Crucial for responsiveness */
   gap: 40px;
-  margin: 40px auto 80px auto; 
+  margin: 40px auto 80px auto;
   width: 100%;
 }
-
 
 .infor-sec {
   width: 100px; /* Scaled down for better balance */
@@ -231,12 +232,9 @@ header {
   color: white;
 }
 
-
 .fa-solid {
   font-size: 40px;
 }
-
-
 
 .infor-grid {
   display: flex;
@@ -245,7 +243,9 @@ header {
   padding: 20px;
   flex: 1; /* This ensures all 4 cards take up equal width */
   max-width: 250px; /* Prevents cards from getting awkwardly wide on big screens */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepares it for a hover effect */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Prepares it for a hover effect */
   cursor: pointer;
 }
 
@@ -262,7 +262,6 @@ header {
   color: #1f2937;
   margin-bottom: 12px;
 }
-
 
 .infor-subtext {
   font-size: 16px;
@@ -282,7 +281,7 @@ header {
 .author {
   text-align: right;
   width: 80%;
-    max-width: 900px;
+  max-width: 900px;
 
   font-size: 22px;
   font-weight: bold;
@@ -311,8 +310,10 @@ footer {
 .button-sec button {
   background-color: transparent;
   color: rgba(245, 235, 235, 0.877);
-  padding: 8px 32px;
+  padding: 10px 32px;
   border-radius: 8px;
+  font-size: 16px;
+  font-weight: 900;
   border: 2px solid rgba(245, 235, 235, 0.877);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -323,6 +324,11 @@ footer {
   color: #fff;
   box-shadow: 0 0 10px rgba(245, 235, 235, 0.5);
   transition: all 0.3s ease;
+}
+
+
+.button-sec button:active {
+  transform: scale(0.95);
 }
 
 .action-headline {
@@ -342,7 +348,7 @@ footer {
   /* 1. Reset Body Grid */
   body {
     /* vh units are risky on mobile; auto lets content breathe */
-    grid-template-rows: auto; 
+    grid-template-rows: auto;
   }
 
   /* 2. Navigation Polish */
@@ -403,7 +409,8 @@ footer {
     font-size: 24px; /* Shrink large quote text */
   }
 
-  .text, .author {
+  .text,
+  .author {
     width: 100%; /* Text spans the width */
   }
 
@@ -432,12 +439,12 @@ footer {
   .hero-title {
     font-size: 28px;
   }
-  
+
   .infor-sec {
     width: 80px;
     height: 80px;
   }
-  
+
   .fa-solid {
     font-size: 30px;
   }
