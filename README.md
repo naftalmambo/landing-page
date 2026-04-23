@@ -6,6 +6,12 @@ A landing page foundation featuring a modern dark-mode aesthetic, interactive UI
 
 [🔗 View Live Demo](https://naftalmambo.github.io/landing-page/)
 
+## 🎨 Reference Design
+Below is the original design provided by **The Odin Project** that this landing page was built to emulate:
+
+![Reference Design](design/landing-design.png)
+
+
 ## 🏗️ Project Origin
 
 This project was built as part of **The Odin Project** curriculum (Foundations Path). It serves as a demonstration of skills in semantic HTML5, CSS Grid, Flexbox, and responsive design principles.
