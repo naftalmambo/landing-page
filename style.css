@@ -59,7 +59,7 @@ header {
 .nav-links ul {
   display: flex;
   list-style: none;
-  gap: 24px;
+  gap: 40px;
 }
 
 .nav-links li a {
@@ -116,7 +116,7 @@ header {
   font-size: 18px;
   color: #e5e7eb;
   margin-bottom: 30px;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 .hero-button {
   background-color: #3882f6;
@@ -301,6 +301,7 @@ footer {
   width: 50%;
   padding: 25px 100px;
   border-radius: 8px;
+  border: none;
 }
 
 .button-sec {
