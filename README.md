@@ -1,5 +1,3 @@
-
-
 # 🚀 Landing Page Project
 
 A landing page foundation featuring a modern dark-mode aesthetic, interactive UI elements, and a responsive layout.
