@@ -450,3 +450,41 @@ footer {
     font-size: 30px;
   }
 }
+
+/* --- RESPONSIVENESS (Landscape Tablets & Small Laptops) --- */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* 1. Reduce side padding to keep elements from squishing */
+  header, 
+  .about-us, 
+  .products, 
+  footer {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  /* 2. Scale down the Hero Section */
+  .hero-title {
+    font-size: 40px; /* Balances size between mobile and desktop */
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  /* 3. Optimize Information Grid */
+  .infor-container {
+    gap: 20px; /* Tighter gap to keep icons in one row */
+    justify-content: space-around;
+  }
+
+  .infor-grid {
+    max-width: 22%; /* Fits 4 icons cleanly across a 1024px width */
+  }
+
+  /* 4. Adjust the Call to Action */
+  .call-to-action {
+    width: 80%; /* Takes up more width than on a massive monitor */
+    padding: 30px 40px;
+  }
+}
