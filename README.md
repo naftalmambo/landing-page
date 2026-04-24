@@ -12,12 +12,11 @@ Below is the original design provided by **The Odin Project** that this landing 
 
 ## 🏗️ Project Origin
 
-This project was built as part of **The Odin Project** curriculum (Foundations Path). It serves as a demonstration of skills in semantic HTML5, CSS Grid, Flexbox, and responsive design principles.
+This project was built as part of **The Odin Project** curriculum (Foundations Path). It serves as a demonstration of skills in semantic HTML5, Flexbox, and responsive design principles.
 
 ## 🎨 A Template for Any Niche
 
-This repository is designed as a :
-**specializable template**. The layout is niche-agnostic and can be easily adapted for:
+This repository is designed as a **specializable template**. The layout is niche-agnostic and can be easily adapted for:
 
 - **SaaS & Startups**: Just swap the hero text and icons.
 - **Local Businesses**: Perfect for "About Us" and "Services" sections.
@@ -27,16 +26,31 @@ This repository is designed as a :
 
 - **Interactive UI**: Custom CSS animations including a pulsing "Sign Up" button and smooth hover-scaling on information cards.
 - **Modern Navigation**: A sticky header with a unique gold-glow accent that follows the user as they scroll.
-- **Responsive Layout**: A "mobile-first" approach using CSS Media Queries, ensuring the site looks great on phones, tablets, and desktops.
+- **Responsive Layout**: A "mobile-first" approach using CSS Media Queries. This was a key learning area, requiring careful debugging to ensure stability across devices.
 - **Dynamic Icons**: Integrated with Font Awesome 7.0.1 for high-resolution vector iconography.
-- **Smooth Scrolling**: Native CSS `scroll-behavior` for seamless navigation between sections.
 
 ## 🛠️ Tech Stack
 
+### Languages & Styling
 - **HTML5**: Semantic structure for SEO and accessibility.
-- **CSS3**: Custom Grid/Flexbox architecture (no heavy frameworks).
+- **CSS3**: Flexbox architecture with custom styling and animations.
 - **Google Fonts**: "Roboto" family (weights 400, 700, 900).
+
+### Tools & Environment
+- **Linux**: Primary development environment used for CLI-based workflow.
+- **VS Code**: Core editor used for writing code and real-time debugging.
+- **Git & GitHub**: Version control and hosting via GitHub Pages.
 - **Font Awesome**: Scalable vector icons.
+
+## 🧠 Challenges & Learning
+
+### The Cross-OS Rendering Hurdle
+One of the most interesting challenges was discovering that the layout looked different on **Windows** compared to my **Linux** development environment. 
+- **The Discovery**: Font rendering engines and scrollbar widths vary between operating systems, which initially caused slight layout shifts.
+- **The Fix**: I am still learning how to manuvre around different OS.
+
+### Mastering Responsiveness
+Making the page truly responsive was a major learning curve. I spent significant time refining media queries to move from a fixed-width mindset to a fluid, mobile-first design.
 
 ## ⚙️ How to Customize
 
@@ -62,4 +76,4 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
-_Created by [Naftal mambo](https://github.com/naftalmambo) - Feel free to reach out!_
+_Created by [Naftal Mambo](https://github.com/naftalmambo) - Feel free to reach out!_
