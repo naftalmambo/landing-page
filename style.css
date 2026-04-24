@@ -22,6 +22,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
+  width: 100%;
 }
 
 .navigation-bar {
@@ -85,6 +86,7 @@ header {
   margin-top: 20px;
   background-color: #1f2937;
   align-items: center;
+  width: 100%;
 }
 
 .hero-main {
@@ -318,6 +320,9 @@ header {
   border: 2px solid rgba(245, 235, 235, 0.877);
   cursor: pointer;
   transition: all 0.3s ease;
+   flex-shrink: 0; /* Prevents the button from being squeezed */
+    white-space: nowrap; /* Prevents text inside the button from wrapping */
+
 }
 
 .button-sec button:hover {
@@ -394,28 +399,5 @@ header {
   .infor-sec {
     width: 80px;
     height: 80px;
-  }
-}
-
-/* --- LARGE TABLETS / SMALL LAPTOPS (769px to 1024px) --- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header, .about-us, .products, #contact {
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-  .infor-container {
-    gap: 20px;
-  }
-}
-
-/* --- ULTRA-WIDE DESKTOPS (1440px+) --- */
-@media (min-width: 1440px) {
-  .hero-section, .infor-container, .call-to-action {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  header, .about-us, .products, #contact {
-    padding-left: 20%;
-    padding-right: 20%;
   }
 }
